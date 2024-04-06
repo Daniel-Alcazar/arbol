@@ -1,0 +1,34 @@
+.tree {
+    display: flex;
+    justify-content: center;
+}
+
+.node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.node .valor {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: lightblue;
+}
+
+.node .ramas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line {
+    border-left: 1px solid black;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.root .line {
+    display: none;
+}

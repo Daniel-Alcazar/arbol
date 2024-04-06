@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Árbol de Expresión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Generador de Árbol de Expresión</h1>
+    <form action="/generar-arbol" method="POST">
+        <label for="expresion">Ingrese la expresión aritmética:</label>
+        <input type="text" name="expresion" id="expresion">
+        <button type="submit">Generar Árbol</button>
+    </form>
+    <!-- El árbol de expresión generado se mostrará aquí -->
+    {% if arbol_expresion %}
+    <div class="arbol">
+        {{ arbol_expresion|safe }}
+    </div>
+    {% endif %}
+</body>
+</html>
